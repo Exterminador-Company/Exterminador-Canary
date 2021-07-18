@@ -1,0 +1,24 @@
+{
+  "name": "bot-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "firebase": "^8.7.1",
+    "mongoose": "^5.13.2",
+    "ts-node-dev": "^1.1.8",
+    "tslib": "^2.3.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "bot": {
+        "token": "ODU0NDc1NDMyMzU1MDM3MjM1.YMkeQg.KFuo3rgiIwo4QcwAZOOrns0CPVI",
+        "prefix": "e.",
+        "id": "854475432355037235",
+        "secret": "Lx5dniV6wCqzpb3qSNAPNxvmMz5nsj0t" 
+    },
+
+    "emojis": {
+        "sim": "<a:simext:827714093514883092>",
+        "nao": "<a:erroext:827712862289657898>",
+        "duvida": "<:duvidaext:828026113749549077>",
+        "tempo": "<:cooldownext:827714415893151744>",
+        "relogio": "<:relogioext:832378446595227708>",
+        "protecao": "<:protection:828000105130229831>",
+        "corembed": "#FF9200"
+    },
+
+    "firebase": {
+        "apiKey": "AIzaSyCOxGgqTH7khVypjjyLBveJ9JuFoEjiaPo",
+        "authDomain": "algo-d6da2.firebaseapp.com",
+        "databaseURL": "https://algo-d6da2-default-rtdb.firebaseio.com",
+        "projectId": "algo-d6da2",
+        "storageBucket": "algo-d6da2.appspot.com",
+        "messagingSenderId": "353935889223",
+        "appId": "1:353935889223:web:7d42378971dde903bfb262"
+    }
+}
