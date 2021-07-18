@@ -1,0 +1,28 @@
+{
+    "bot": {
+        "token": "Token do seu bot",
+        "prefix": "prefix do seu bot",
+        "id": "id do seu bot",
+        "secret": "secret do seu bot" 
+    },
+
+    "emojis": {
+        "sim": "emoji que vc quiser",
+        "nao": "emoji que vc quiser",
+        "duvida": "emoji que vc quiser",
+        "tempo": "emoji que vc quiser",
+        "relogio": "emoji que vc quiser",
+        "protecao": "emoji que vc quiser",
+        "corembed": "#000000"
+    },
+
+    "firebase": {
+        "apiKey": "Sua api key do firebase",
+        "authDomain": "authDomain do seu firebase",
+        "databaseURL": "URL da database do seu firebase",
+        "projectId": "id do projeto do firebase",
+        "storageBucket": "storageBucket do seu firebase",
+        "messagingSenderId": "messagingSenderId do seu firebase",
+        "appId": "seu appId do firebase"
+    }
+}
