@@ -9,6 +9,7 @@ export const command: Command = {
 
     run: async(client, message, args) => {
         let db = await database.ref(`Servidores/Prefixo/${message.guild.id}`).once('value');
+        let db2 = await database.ref(`Servidores/Lingua/${message.guild.id}`).once('value');
         
         let prefixo;
 
@@ -18,6 +19,15 @@ export const command: Command = {
             prefixo = db.val().prefix
         }
 
-        message.channel.send(`O prefixo atual do bot é **${prefixo}**`)
+        let messagi;
+
+        if(!db2.val()) {
+            messagi = `${client.config.emojis.sim} - O prefixo atual do bot é **${prefixo}**`
+        }
+        if(db2.val() != null) {
+            messagi = `${client.config.emojis.sim} - The bot's current prefix is **${prefixo}**`
+        }
+
+        message.channel.send(`${messagi}`)
     }
 }

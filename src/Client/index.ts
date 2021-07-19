@@ -1,14 +1,16 @@
 import { Client, Collection } from 'discord.js';
 import path from 'path';
 import { readdirSync } from 'fs'
-import { Command, Event, Config } from '../Interfaces'
+import { Command, Event, Config, Lang } from '../Interfaces'
 import Configjson from '../config.json'
+import Langjson from '../linguas.json'
 import Firebase from 'firebase'
 
 class ExtendedClient extends Client {
     public commands: Collection<string, Command> = new Collection();
     public events: Collection<string, Event> = new Collection();
     public config: Config = Configjson
+    public lang: Lang = Langjson
     public aliases: Collection<string, Command> = new Collection()
 
     public async init() {

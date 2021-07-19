@@ -1,0 +1,15 @@
+{
+    "en": {
+        "iniciar": {
+            "alreadyDatabase": "<a:erroext:827712862289657898> - You have already initialized the database for this server!",
+            "success": "<a:simext:827714093514883092> - Success! you initialized the database on this server"
+        }
+    },
+
+    "pt": {
+        "iniciar": {
+            "alreadyDatabase": "<a:erroext:827712862289657898> - Você já iniciou a database nesse servidor!",
+            "success": "<a:simext:827714093514883092> - Sucesso! você iniciou a database nesse servidor!"
+        }
+    }
+}

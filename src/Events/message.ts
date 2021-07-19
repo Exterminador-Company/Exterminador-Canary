@@ -11,6 +11,7 @@ export const event: Event = {
         let FIX;
 
         let db = await database.ref(`Servidores/Prefixo/${message.guild.id}`).once('value')
+        let db2 = await database.ref(`Servidores/Lingua/${message.guild.id}`).once('value');
 
         if(!db.val()) {
             FIX = client.config.bot.prefix
@@ -18,13 +19,26 @@ export const event: Event = {
             FIX = db.val().prefix
         }
 
+        let title; 
+        let description;
+
+        if(!db2.val()) {
+            title = "Alguém me chamou?"
+            description = `Olá! Sou o **${client.user.tag}**! Meu prefixo nesse servidor é: **${FIX}**\n\nSou a versão canary do Exterminador-Bot escrito em Typescript! Ainda estou em desenvolvimento.`
+        }
+
+        if(db2.val() !== null) {
+            title = "Did anyone call me?"
+            description = `Hello! I am **${client.user.tag}**! My prefix on this server is: **${FIX}**\n\nI'm the canary version at Exterminador-Bot writing in Typescript! still in development`
+        }
+
         if(message.content.startsWith(`<@${client.config.bot.id}>`) || message.content.startsWith(`<@!${client.config.bot.id}>`)) {
             const embed = new MessageEmbed()
-            .setTitle(`Alguém me chamou?`)
-            .setDescription(`Olá! Sou o **${client.user.tag}**! Meu prefixo nesse servidor é: **${FIX}**`)
+            .setTitle(`${title}`)
+            .setDescription(`${description}`)
             .addField('✨ Prefix:', `\`\`\`${FIX}\`\`\``)
-            .addField('🚀 Servidores:', `\`\`\`${client.guilds.cache.size}\`\`\``)
-            .addField('👨‍👩‍👦 Usuários: ', `\`\`\`${client.users.cache.size}\`\`\``)
+            .addField('🚀 Servers:', `\`\`\`${client.guilds.cache.size}\`\`\``)
+            .addField('👨‍👩‍👦 Users: ', `\`\`\`${client.users.cache.size}\`\`\``)
             .setColor(client.config.emojis.corembed)
 
             message.channel.send(embed)

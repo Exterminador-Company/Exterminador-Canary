@@ -13,6 +13,7 @@ export const command: Command = {
         let db = await database.ref(`Servidores/Prefixo/${message.guild.id}`).once('value');
         let db2 = await database.ref(`Servidores/Iniciar/${message.guild.id}`).once('value');
         let db3 = await database.ref(`Servidores/Welcome/${message.guild.id}`).once('value');
+        let db4 = await database.ref(`Servidores/Lingua/${message.guild.id}`).once('value');
 
         if(!db.val()) {
             database.ref(`Servidores/Prefixo/${message.guild.id}`).set({
@@ -32,18 +33,32 @@ export const command: Command = {
             })
         }
 
+        let alreadyDatabase;
+        let sucess;
+
+        if(db4.val() != null) {
+            alreadyDatabase = `${client.lang.en.iniciar.alreadyDatabase}`
+            sucess = `${client.lang.en.iniciar.success}`
+        }
+
+        if(!db4.val()) {
+            alreadyDatabase = `${client.lang.pt.iniciar.alreadyDatabase}`
+            sucess = `${client.lang.pt.iniciar.success}`
+        }
+
+
         if(db.val() != null) {
-            return message.channel.send(`${client.config.emojis.nao} - Você já iniciou a database!`)
+            return message.channel.send(`${alreadyDatabase}`)
         }
 
         if(db2.val() != null) {
-            return message.channel.send(`${client.config.emojis.nao} - Você já iniciou a database!`)
+            return message.channel.send(`${alreadyDatabase}`)
         }
 
         if(db3.val() != null) {
-            return message.channel.send(`${client.config.emojis.nao} - Você já iniciou a database!`)
+            return message.channel.send(`${alreadyDatabase}`)
         }
 
-        message.channel.send(`${client.config.emojis.sim} Sucesso! Você iniciou a database do bot no servidor`)
+        message.channel.send(`${sucess}`)
     }
 }
