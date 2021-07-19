@@ -6,7 +6,13 @@ Esse projeto é o repositório do Exterminador-Canary, a versão canary do Exter
 
 Como começar?
 
-- Primeiramente mude a config.example.json para config.json e arrume as coisas que estão dentro
+- Primeiramente clone o repositório utilizando: 
+
+```shell
+git clone https://github.com/Exterminador-Company/Exterminador-Canary.git
+```
+
+- Após isso mude a config.example.json para config.json e arrume as coisas que estão dentro
 - Depois utilize:
 
 ```shell

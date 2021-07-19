@@ -17,6 +17,8 @@ export const command: Command = {
        let msg3;
        let argumento = args[0]
 
+       if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(`${client.config.emojis.nao}`)
+
        if(db3.val() != null) {
            msg1 = `${client.config.emojis.nao} - The database for the bot is not initializated in this server!\n\n **To start use ${client.config.bot.prefix}start** `
            msg2 = "enter a new prefix"
